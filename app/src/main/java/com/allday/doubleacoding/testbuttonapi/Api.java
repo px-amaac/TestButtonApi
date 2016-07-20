@@ -9,7 +9,7 @@ import retrofit2.http.POST;
 
 public class Api {
 
-    private static String mBaseUrl = "http://8ba99e66.ngrok.io";
+    private static String mBaseUrl = "https://14659ac7.ngrok.io";
 
     public static ApiInterface getApiInterface() {
 
@@ -22,7 +22,7 @@ public class Api {
     public interface ApiInterface {
         @FormUrlEncoded
         @POST("outlets/run_command")
-        Call<ResponseBody> updateUser(@Field("command") String command);
+        Call<ResponseBody> updateUser(@Field("code_name") String code_name);
 
     }
 }
