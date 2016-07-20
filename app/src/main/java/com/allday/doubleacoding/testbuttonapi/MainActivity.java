@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Api.ApiInterface apiInterface = Api.getApiInterface();
-                Call<ResponseBody> call = apiInterface.updateUser("command");
+                Call<ResponseBody> call = apiInterface.updateUser("guest_bed_room-off");
                 call.enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, retrofit2.Response<ResponseBody> response) {
@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+
+
     }
 
     @Override
